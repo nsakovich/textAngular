@@ -2788,7 +2788,7 @@ angular.module('textAngular.taBind', ['textAngular.factories', 'textAngular.DOM'
 
 // this global var is used to prevent multiple fires of the drop event. Needs to be global to the textAngular file.
 var dropFired = false;
-var textAngular = angular.module("textAngular", ['ngSanitize', 'textAngularSetup', 'textAngular.factories', 'textAngular.DOM', 'textAngular.validators', 'textAngular.taBind']); //This makes ngSanitize required
+var textAngular = angular.module("textAngular", ['ngSanitize', 'textAngularSetup', 'textAngular.factories', 'textAngular.DOM', 'textAngular.validators', 'textAngular.taBind', 'ui.bootstrap.dropdownToggle', 'angularSpectrumColorpicker']); //This makes ngSanitize required
 
 textAngular.config([function(){
 	// clear taTools variable. Just catches testing and any other time that this config may run multiple times...
@@ -3051,7 +3051,7 @@ textAngular.directive("textAngular", [
 				scope.displayElements.resize.background.on('click', function(e) {
 					scope.displayElements.text[0].focus();
 				});
-				
+
 				// define the show and hide events
 				scope.reflowResizeOverlay = function(_el){
 					_el = angular.element(_el)[0];
